@@ -87,11 +87,12 @@
 {% load i18n %}
 
 <div class="text-center about-text">
-    <h2 class="theme-secondary">WebODM {{ version }}</h2>
-    
-    <div style="margin-bottom: 16px; margin-top: 16px;"><i class="fab fa-github"></i> <a target="_blank" href="https://github.com/OpenDroneMap/WebODM">https://github.com/OpenDroneMap/WebODM</a></div>
+  <h2 class="theme-secondary">Digitec Agro - Panel {{ version }}</h2>
+  
+  <div style="margin-bottom: 16px; margin-top: 16px;"><i class="fab fa-github"></i> <a target="_blank" href="https://www.linkedin.com/in/yduron/">Desarrollador Ing. Alejandro Durón</a></div>
 
-    <div style="font-size: 90%; opacity: 0.9;" class="theme-secondary">{% blocktrans with link_start="<a href='https://raw.githubusercontent.com/OpenDroneMap/WebODM/master/LICENSE.md'>" link_end='</a>' %}This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See {{link_start}}the GNU Affero General Public License{{link_end}} for more details.{% endblocktrans %}</div>
+  <div style="font-size: 90%; opacity: 0.9;" class="theme-secondary">
+  {% blocktrans with link_start="<a href='https://www.linkedin.com/company/agtiva-agricultura-4-0-agricultura-de-precision/?originalSubdomain=cr'>" link_end='</a>' %}Digitec Agro es una plataforma de procesamiento de imágenes aéreas provenientes de VANTs (Vehículos Aéreos no Tripulados, UAV o Drones), la plataforma se centra en el procesamiento de imágenes multiespectrales para la obtención de indices de vegetación e imágenes RGB para la obtención de orthophotos, modelos de terreno y modelos 3D. Actualmente Digitec Agro se esta desarrollando en conjunto con {{link_start}}AGTIVA Agricultura 4.0{{link_end}}.{% endblocktrans %}</div>
 </div>
 
 {% endblock %}

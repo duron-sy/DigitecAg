@@ -71,10 +71,10 @@ export default class Histogram extends React.Component {
     }
 
     const st = {
-        min: min,
-        max: max,
-        minInput: this.props.unitForward(min).toFixed(3),
-        maxInput: this.props.unitForward(max).toFixed(3)
+        min: minX.toFixed(8),
+        max: maxX.toFixed(8),
+        minInput: this.props.unitForward(min).toFixed(8),
+        maxInput: this.props.unitForward(max).toFixed(8)
     };
 
     if (!this.state){
@@ -264,16 +264,16 @@ export default class Histogram extends React.Component {
   handleUnitSystemChanged = e => {
     this.redraw();
     this.setState({
-        minInput: this.props.unitForward(this.state.min).toFixed(3), 
-        maxInput: this.props.unitForward(this.state.max).toFixed(3)
+        minInput: this.props.unitForward(this.state.min).toFixed(8), 
+        maxInput: this.props.unitForward(this.state.max).toFixed(8)
     });
   }
     
   componentDidUpdate(prevProps, prevState){
       if (prevState.min !== this.state.min || prevState.max !== this.state.max){
         this.setState({
-            minInput: this.props.unitForward(this.state.min).toFixed(3), 
-            maxInput: this.props.unitForward(this.state.max).toFixed(3)
+            minInput: this.props.unitForward(this.state.min).toFixed(8), 
+            maxInput: this.props.unitForward(this.state.max).toFixed(8)
         });
       }
 
@@ -321,7 +321,7 @@ export default class Histogram extends React.Component {
     if (!isNaN(val)){
         val = this.props.unitBackward(val);
         val = Math.max(this.state.min, Math.min(this.rangeX[1], val));
-        this.setState({max: val, maxInput: val.toFixed(3)});
+        this.setState({max: val, maxInput: val.toFixed(8)});
     }
   }
 
@@ -338,7 +338,7 @@ export default class Histogram extends React.Component {
     if (!isNaN(val)){
         val = this.props.unitBackward(val);
         val = Math.max(this.rangeX[0], Math.min(this.state.max, val));
-        this.setState({min: val, minInput: val.toFixed(3)});
+        this.setState({min: val, minInput: val.toFixed(8)});
     }
   };
 

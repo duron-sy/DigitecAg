@@ -12,9 +12,14 @@ algos = {
         'help': _('Normalized Difference Vegetation Index shows the amount of green vegetation.'),
         'range': (-1, 1)
     },
-    'NDYI': {
-        'expr': '(G - B) / (G + B)',
-        'help': _('Normalized difference yellowness index (NDYI), best model variability in relative yield potential in Canola.'),
+    'NDWI': {
+        'expr': '(G - N) / (G + N)',
+        'help': _('Normalized Difference Water Index shows the amount of water content in water bodies.'),
+        'range': (-1, 1)
+    },
+    'GNDVI':{
+        'expr': '(N - G) / (N + G)',
+        'help': _('Green Normalized Difference Vegetation Index is similar to NDVI, but measures the green spectrum instead of red.'),
         'range': (-1, 1)
     },
     'NDRE': {
@@ -22,9 +27,23 @@ algos = {
         'help': _('Normalized Difference Red Edge Index shows the amount of green vegetation of permanent or later stage crops.'),
         'range': (-1, 1)
     },
-    'NDWI': {
-        'expr': '(G - N) / (G + N)',
-        'help': _('Normalized Difference Water Index shows the amount of water content in water bodies.'),
+    'OSAVI': {
+        'expr': '(N - R) / (N + R + 0.16)',
+        'help': _('Optimized Soil Adjusted Vegetation Index is based on SAVI, but tends to work better in areas with little vegetation where soil is visible.'),
+        'range': (-0.0003, 0.0003)
+    },
+    'LCI': {
+        'expr': '(N - Re) / (N + R)',
+        'help': _('Leaf Chlorophyll Index - Index to assess chlorophyll content in areas of complete leaf coverage.')
+    },
+    'MSAVI2': {
+        'expr': '(2 * (N + 1) - sqrt(((2 * N + 1) ** 2) - 8 * (N - R))) / (2)',
+        'help': _('The Modified Soil Adjusted Vegetation Index (MSAVI2) method minimizes the effect of bare soil on the SAVI.')
+    },
+    
+    'NDYI': {
+        'expr': '(G - B) / (G + B)',
+        'help': _('Normalized difference yellowness index (NDYI), best model variability in relative yield potential in Canola.'),
         'range': (-1, 1)
     },
     'NDVI (Blue)': {
@@ -63,18 +82,14 @@ algos = {
         'help': _('Green Leaf Index shows greens leaves and stems.'),
         'range': (-1, 1)
     },
-    'GNDVI':{
-        'expr': '(N - G) / (N + G)',
-        'help': _('Green Normalized Difference Vegetation Index is similar to NDVI, but measures the green spectrum instead of red.'),
-        'range': (-1, 1)
-    },
     'GRVI':{
         'expr': 'N / G',
         'help': _('Green Ratio Vegetation Index is sensitive to photosynthetic rates in forests.')
     },
     'SAVI':{
         'expr': '(1.5 * (N - R)) / (N + R + 0.5)',
-        'help': _('Soil Adjusted Vegetation Index is similar to NDVI but attempts to remove the effects of soil areas using an adjustment factor (0.5).')
+        'help': _('Soil Adjusted Vegetation Index is similar to NDVI but attempts to remove the effects of soil areas using an adjustment factor (0.5).'),
+        'range': (-0.0001, 0.0001)
     },
     'MNLI':{
         'expr': '((N ** 2 - R) * 1.5) / (N ** 2 + R + 0.5)',
@@ -91,10 +106,6 @@ algos = {
     'TDVI': {
         'expr': '1.5 * ((N - R) / sqrt(N ** 2 + R + 0.5))',
         'help': _('Transformed Difference Vegetation Index highlights vegetation cover in urban environments.')
-    },
-    'OSAVI': {
-        'expr': '(N - R) / (N + R + 0.16)',
-        'help': _('Optimized Soil Adjusted Vegetation Index is based on SAVI, but tends to work better in areas with little vegetation where soil is visible.')
     },
     'LAI': {
         'expr': '3.618 * (2.5 * (N - R) / (N + 6*R - 7.5*B + 1)) * 0.118',
