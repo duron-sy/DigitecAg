@@ -264,16 +264,16 @@ export default class Histogram extends React.Component {
   handleUnitSystemChanged = e => {
     this.redraw();
     this.setState({
-        minInput: this.props.unitForward(this.state.min).toFixed(8), 
-        maxInput: this.props.unitForward(this.state.max).toFixed(8)
+        minInput: this.props.unitForward(this.state.min).toFixed(6), 
+        maxInput: this.props.unitForward(this.state.max).toFixed(6)
     });
   }
     
   componentDidUpdate(prevProps, prevState){
       if (prevState.min !== this.state.min || prevState.max !== this.state.max){
         this.setState({
-            minInput: this.props.unitForward(this.state.min).toFixed(8), 
-            maxInput: this.props.unitForward(this.state.max).toFixed(8)
+            minInput: this.props.unitForward(this.state.min).toFixed(6), 
+            maxInput: this.props.unitForward(this.state.max).toFixed(6)
         });
       }
 
@@ -321,7 +321,7 @@ export default class Histogram extends React.Component {
     if (!isNaN(val)){
         val = this.props.unitBackward(val);
         val = Math.max(this.state.min, Math.min(this.rangeX[1], val));
-        this.setState({max: val, maxInput: val.toFixed(8)});
+        this.setState({max: val, maxInput: val.toFixed(6)});
     }
   }
 
@@ -338,7 +338,7 @@ export default class Histogram extends React.Component {
     if (!isNaN(val)){
         val = this.props.unitBackward(val);
         val = Math.max(this.rangeX[0], Math.min(this.state.max, val));
-        this.setState({min: val, minInput: val.toFixed(8)});
+        this.setState({min: val, minInput: val.toFixed(6)});
     }
   };
 
