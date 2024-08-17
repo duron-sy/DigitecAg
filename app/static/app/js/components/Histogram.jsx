@@ -272,8 +272,8 @@ export default class Histogram extends React.Component {
   componentDidUpdate(prevProps, prevState){
     if (prevState.min !== this.state.min || prevState.max !== this.state.max){
       this.setState({
-          minInput: this.props.unitForward(this.state.min).toFixed(3), 
-          maxInput: this.props.unitForward(this.state.max).toFixed(3)
+          minInput: this.props.unitForward(this.state.min), 
+          maxInput: this.props.unitForward(this.state.max)
       });
     }
 
