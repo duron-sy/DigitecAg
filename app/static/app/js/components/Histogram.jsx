@@ -269,12 +269,12 @@ export default class Histogram extends React.Component {
     });
   }
     
-componentDidUpdate(prevProps, prevState){
+  componentDidUpdate(prevProps, prevState){
     if (prevState.min !== this.state.min || prevState.max !== this.state.max){
-        this.setState({
-            minInput: this.props.unitForward(this.state.min).toFixed(3), 
-            maxInput: this.props.unitForward(this.state.max).toFixed(3)
-        });
+      this.setState({
+          minInput: this.props.unitForward(this.state.min).toFixed(3), 
+          maxInput: this.props.unitForward(this.state.max).toFixed(3)
+      });
     }
 
     if (prevState.min !== this.state.min || 
@@ -286,7 +286,7 @@ componentDidUpdate(prevProps, prevState){
         if (!this.maxDown && !this.minDown) this.redraw();
         this.updateColorMap(prevProps.colorMap !== this.props.colorMap);
         
-        if (this.props.onUpdate !== undefined) this.props.onUpdate({min: this.state.min.toFixed(8), max: this.state.max.toFixed(8)});
+        if (this.props.onUpdate !== undefined) this.props.onUpdate({min: this.state.min, max: this.state.max});
     }
 }
     
