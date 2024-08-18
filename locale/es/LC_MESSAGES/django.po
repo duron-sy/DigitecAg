@@ -1458,7 +1458,7 @@ msgid ""
 "To create a map, press the \"%(upload_images)s\" button, or drag and drop "
 "some images into a project."
 msgstr ""
-"Para crear un mapa, presione el botón \"Seleccionar imágenes\" o arrastre y "
+"Para crear un mapa, presione el botón Seleccionar imágenes o arrastre y "
 "suelte algunas imágenes en un proyecto."
 
 #: app/templates/app/dashboard.html:38
