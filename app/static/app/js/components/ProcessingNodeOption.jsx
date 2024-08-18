@@ -175,7 +175,8 @@ class ProcessingNodeOption extends React.Component {
 
     return (
       <div className="processing-node-option form-inline form-group form-horizontal" ref={this.setTooltips}>
-        <label>{this.props.name} {(!this.isEnumType() && this.props.domain ? `(${this.props.domain})` : "")} <i data-toggle="tooltip" data-placement="bottom" title={this.props.help} onClick={this.handleHelp} className="fa fa-info-circle info-button help-button"></i></label><br/>
+        {/*<label>{this.props.name} {(!this.isEnumType() && this.props.domain ? `(${this.props.domain})` : "")} <i data-toggle="tooltip" data-placement="bottom" title={this.props.help} onClick={this.handleHelp} className="fa fa-info-circle info-button help-button"></i></label><br/>*/}
+        <label>{this.props.name} {(!this.isEnumType() && this.props.domain ? `(${this.props.domain})` : "")} <i data-toggle="tooltip" data-placement="bottom" title={this.props.help}  className="fa fa-info-circle info-button help-button"></i></label><br/>
         {inputControl}
         {loadFileControl}
         
