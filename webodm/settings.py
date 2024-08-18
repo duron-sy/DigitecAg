@@ -127,6 +127,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'webodm.forcelang.ForceDefaultLanguageMiddleware',
 ]
 
 ROOT_URLCONF = 'webodm.urls'
@@ -177,7 +178,7 @@ AUTHENTICATION_BACKENDS = (
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'es'
+LANGUAGE_CODE = 'en-us'
 TIME_ZONE = tzlocal.get_localzone().zone
 USE_I18N = True
 USE_L10N = True
