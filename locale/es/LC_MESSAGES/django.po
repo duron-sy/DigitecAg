@@ -1449,8 +1449,8 @@ msgstr ""
 "software que implemente esta %(api_link)s."
 
 #: app/templates/app/dashboard.html:32
-msgid "Select Images and GCP"
-msgstr "Seleccionar imágenes y GCP"
+msgid "Select Images"
+msgstr "Seleccionar imágenes"
 
 #: app/templates/app/dashboard.html:34
 #, python-format

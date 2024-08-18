@@ -1022,8 +1022,8 @@ msgid "Saving changes..."
 msgstr "Guardando cambios..."
 
 #: app/static/app/js/components/ProjectListItem.jsx:641
-msgid "Select Images and GCP"
-msgstr "Seleccionar imágenes y GCP"
+msgid "Select Images"
+msgstr "Seleccionar imágenes"
 
 #: app/static/app/js/components/ProjectListItem.jsx:675
 #, python-format
