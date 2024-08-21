@@ -64,7 +64,7 @@ msgstr "Normal"
 
 #: app/static/app/js/MapView.jsx:113 app/static/app/js/components/Map.jsx:93
 msgid "Plant Health"
-msgstr "Salud vegetal"
+msgstr "Vigor Vegetal"
 
 #: app/static/app/js/MapView.jsx:118
 #: app/static/app/js/classes/AssetDownloads.js:51
