@@ -67,8 +67,8 @@ if [[ "$WO_DEFAULT_NODES" > 0 ]]; then
     while [ $i -ne "$WO_DEFAULT_NODES" ]
     do
         i=$(($i+1))
-        NODE_HOST=$(python manage.py getnodehostname webodm_node-odm_$i)
-        python manage.py addnode $NODE_HOST 3000 --label node-odm-$i
+        NODE_HOST=$(python manage.py getnodehostname digitec_node-odm_$i)
+        python manage.py addnode $NODE_HOST 3000 --label D-Node-$i
     done
 fi
 
